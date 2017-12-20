@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>首页</title>
+  <link href="css/tao.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>	
+	<script type="text/javascript">
+	(function(doc, win) { // 分辨率Resolution适配
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				if (clientWidth >= 640) {
+					clientWidth = 640;
+				}
+				docEl.style.fontSize = 100 * (clientWidth / 1080) + 'px';
+			}; // Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+		// 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale, 要注释上面的meta标签
+	})(document, window); 
+	</script>
+	<header class="index">
+		<div class="c-hd">
+			<section class="cancel">
+				<a href="#"><lable>取消</lable></a>
+			</section>
+			<section class="hd-search">
+			<form id="searchForm" action="#" method="post" class="box">								
+				<div class="box-flex c-form-search">
+				<em></em>
+				<input type="text" name="q" class="search-form" placeholder="请输入商品名或关键词" value="" autocomplete="off"/>
+				</div>
+				<input type="submit" class="searchbtn" value="搜索"/>				
+			</form>
+			</section>
+		</div>
+	</header>
+	<div class="sort-nav">
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/nvzhuang.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">女装</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/nanzhuang.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">男装</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/neiyi.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">内衣</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/meizhuang.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">美妆</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/peishi.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">鞋包配饰</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/muying.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">母婴儿童</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/shuma.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">数码家电</span>
+		</a>
+				<a href="#">
+			<span class="sort-circle" style="background:url(img/peishi.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">居家</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/peishi.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">美食</span>
+		</a>
+		<a href="#">
+			<span class="sort-circle" style="background:url(img/chongzhi.png) no-repeat;background-size:100%"></span>
+			<span class="sort-desc">充值中心</span>
+		</a>
+	</div>
+	<div class="channel-nav">
+		<ul class="box col2">
+			<li class="box-flex">
+				<section>
+					<div style="-webkit-box-flex:1;display:block;color: #55a40f">
+					<h2 class="title">9.9超值包邮</h2>
+					<p class="txt">包邮包邮</p>
+					</div>
+					<a href="#"><img style="display:inline-block;width:1.5rem;height:1.5rem;margin-top:0.2rem;box-sizing: border-box;margin-right:0.5rem" src="img/channel.png" alt="哈哈哈哈"></img></a>
+				</section>
+				<section>
+					<div style="-webkit-box-flex:1;display:block;">
+						<h2 class="title">淘抢购</h2>
+						<p class="txt">好货强起来</p>
+					</div>
+					<a href="#"><img style="display:inline-block;width:1.5rem;height:1.5rem;margin-top:0.2rem;box-sizing: border-box;margin-right:0.5rem" src="img/channel.png" alt="哈哈哈哈"></img></a>
+				</section>
+			</li>
+			<li class="box-flex">
+				<section>
+					<div style="display:block;-webkit-box-flex:1;">
+						<h2 class="title">有好券</h2>
+						<p class="txt">超值神券</p>
+					</div>
+					<a href="#"><img style="display:inline-block;width:1.5rem;height:1.5rem;margin-top:0.2rem;box-sizing: border-box;margin-right:0.5rem" src="img/channel.png" alt="哈哈哈哈"></img></a>
+				</section>
+				<section>
+					<div style="-webkit-box-flex:1;display:block;">
+						<h2 class="title">每日好店</h2>
+						<p class="txt">应有尽有</p>
+					</div>
+					<a href="#"><img style="display:inline-block;width:1.5rem;height:1.5rem;margin-top:0.2rem;box-sizing: border-box;margin-right:0.5rem" src="img/channel.png" alt="哈哈哈哈"></img></a>
+				</section>				
+			</li>
+		</ul>
+	</div>
+	<div class="tuijian">
+		<div class="col-title">
+		<section><span>每.日.优.选</span></section>
+		</div>
+		<ul class="list-ul">
+			<li>
+				<a href="#">
+				<div class="list-item">
+				<div class="pic"><img src="https://d1.lashouimg.com/cms/M00/CD/1B/CqgBJlVSq4GAME9fAACehNOHKrw729-220x140.jpg" original="https://d1.lashouimg.com/cms/M00/CD/1B/CqgBJlVSq4GAME9fAACehNOHKrw729-220x140.jpg" alt="【望京】春季护理套系，6选3" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>大号加厚柔软宝宝衣服</h2><em></em></div>					
+					<p class="txt">【望京】春季护理套系，6选3</p>
+					<div class="main">
+						<p class="price"><em>￥</em>38<del>￥1540</del></p>
+						<p class="num">销量 19</p>
+					</div>
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="list-ul">
+			<li>
+				<a href="#">
+				<div class="list-item">
+				<div class="pic"><img src="https://d1.lashouimg.com/cms/M00/CD/1B/CqgBJlVSq4GAME9fAACehNOHKrw729-220x140.jpg" original="https://d1.lashouimg.com/cms/M00/CD/1B/CqgBJlVSq4GAME9fAACehNOHKrw729-220x140.jpg" alt="【望京】春季护理套系，6选3" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>大号加厚柔软宝宝衣服</h2><em></em></div>					
+					<p class="txt">【望京】春季护理套系，6选3</p>
+					<div class="main">
+						<p class="price"><em>￥</em>38<del>￥1540</del></p>
+						<p class="num">销量 19</p>
+					</div>
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+		<a href="#" style="color:#6E7D8B">
+			<div class="load-more">查看全部优选</div>
+		</a>
+	</div>
+ </body>
+</html>
