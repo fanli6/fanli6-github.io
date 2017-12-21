@@ -1,14 +1,14 @@
 a{text-decoration:none;outline:0}
-	header.index{height:0.88rem;background:#0ecac7;position:relative}
+	header.index{height:1.05rem;background:#0ecac7;position:relative}
 	header section.welcome {text-align: center;color: #ff4f00;-webkit-box-flex: 1;}
-	section{display:block}
+	section,footer{display:block}
 	label{cursor:default}
 	em{font-style:normal}
 	ul,ol,li,p{list-style:none;margin:0;padding:0}
 	h2{font-weight:normal}
 	body{color:#333;font-size:.38rem;line-height:1.5;font-family:arial,Microsoft Yahei;margin:0 auto}
-	.box,.c-hd,.channel-nav ul li section,.info,.list-item,.list-item .info .main,.mall-cate,.sort-wrapper,.sort-wrapper section ul,.btnbox{display:-webkit-box;width:100%}
-	.box-flex,.list-item .info,.mall-cate li{-webkit-box-flex:1;display:block}
+	.box,.c-hd,.channel-nav ul li section,.info,.list-item,.list-item .info .main,.mall-cate,.sort-wrapper,.sort-wrapper section ul,.btnbox,.footer-t{display:-webkit-box;width:100%}
+	.box-flex,.list-item .info,.mall-cate li,.footer-t span{-webkit-box-flex:1;display:block}
 	.c-hd section.hd-search{margin-top:.1rem;position:relative;-webkit-box-flex:1;box-sizing:border-box}
 	.hd-search .search-form {background: #0eb7ca;border: 0;border-radius: .06rem;color: black;font-size: .24rem;padding: .1rem .1rem .1rem .6rem;cursor: pointer;width:100%;box-sizing:border-box}
 	.searchbtn {background: 0;color: #fff;font-size: .38rem;display: inline-block;border: 0;padding: 0 .27rem;position: relative;top: .03rem;}
@@ -58,4 +58,10 @@ a{text-decoration:none;outline:0}
 	.sort-screen .p s {color: #414040;text-decoration: none;border-radius: .05rem;padding:.1rem;font-size: .33rem;cursor: pointer;}
 	.sort-screen .p .current s {background: #0eb7ca;color: #fff;}
 	.screen-submit {color: #fff;margin: 0;height: .6rem;line-height: .6rem;background: #0eb7ca;text-align: center;font-size: .32rem;-webkit-box-flex: 1;display: block;}
+	.footer-t {
+    height: .95rem;
+    line-height: .95rem;
+    padding: 0 .27rem;
+}
+	.footer-t span{text-align:center}
 	/* http://www.zcfy.cc/article/understanding-flexbox-everything-you-need-to-know-freecodecamp-2471.html */
