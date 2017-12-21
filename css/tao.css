@@ -26,9 +26,9 @@ a{text-decoration:none;outline:0}
 	.channel-nav ul .txt {		font-size: .24rem;		color: #787878;		margin-left: .39rem;				line-height: 1;		margin-bottom: .28rem;	}	.col-title {		padding: .2rem;		border-bottom: .01rem solid #eee;		color: #333;		text-align: center;		background: #fff;	}
 	.col-title span {		font-size: .42rem;		color: #ff4f00;	}
 	.col-title span:after, .col-title span:before {		display: inline-block;		content: '';		width: .36rem;		height: .276rem;		margin: .21rem;		background: url(../img/icon_like.png) no-repeat center;		background-size: 100%;	}
-	.list-ul li {		min-height: 1.2rem;		padding: .3rem .24rem;		border-bottom: .02rem solid #ebebeb;		position: relative;	}
+	.list-ul li {		min-height: 1.2rem;		padding: .1rem .2rem;		border-bottom: .02rem solid #ebebeb;		position: relative;	}
 	.list-item .pic {		width: 3.48rem;		height: 3.48rem;		margin: 0 .3rem 0 0;		overflow: hidden;	}
-	.list-item .info .txt {		font-size: .38rem;		color: #787878;		margin-left: -.1rem;		overflow: hidden;		white-space: nowrap;		text-overflow: ellipsis;		line-height: 1;		margin-bottom: .28rem;	}
+	.list-item .info .txt {		font-size: .38rem;		color: #787878;		margin-left: -.1rem;		overflow: hidden;	text-overflow: ellipsis;		line-height: 1.5;		margin-bottom: .28rem;	}
 	.list-item .info .main{line-height:200%}
 	.list-item .info .title em {		display: none;		color: #626262;		font-size: .24rem;		position: absolute;		right: 0;	}
 	.list-item .info .title h2 {width: 100%;font-size: .5rem;color: #1e1e1e;line-height: 1;padding: .1rem 0 .2rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
