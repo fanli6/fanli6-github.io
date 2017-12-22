@@ -12,7 +12,8 @@
   <link href="../css/tao.css" rel="stylesheet" type="text/css" />
  </head>
  <body>	
-	<script type="text/javascript">
+ <script type="text/javascript" src="https://d1.lashouimg.com/wap/js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript">	
 	(function(doc, win) { // 分辨率Resolution适配
 		var docEl = doc.documentElement,
 			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
@@ -29,6 +30,28 @@
 		doc.addEventListener('DOMContentLoaded', recalc, false);
 		// 一物理像素		在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale, 要注释上面的meta标签
 	})(document, window); 
+	function isMobile(){
+		var p = navigator.platform;
+		if (p.indexOf("Win") == 0 || p.indexOf("Mac") == 0 || p.indexOf("Linux") == 0 || p == "x11")
+		{
+			return "pc";
+		}else{
+			return "m";
+		}
+	}
+	$(function(){
+		$("a").on('click',function(){
+			
+			if (isMobile() == 'pc')
+			{
+				var h = $(this).attr('data-href');
+				if(h){	
+					location.href = h;
+					return false;
+				}				
+			}
+		})
+	});	
 	</script>
 	<header class="index">
 		<div class="c-hd">
@@ -43,38 +66,12 @@
 		</div>
 		<ul class="list-ul">
 			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFwttVQkTHhxJdFMGUDtFdFUBAE0MY2VFdwNYHAtaTVIBUkRMR05aZWlSRWpSflQSO2h8cWY2bAQdcFp0JntXGWwRBlUdRxUBDgRVClsQCRcCXh5SJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwsVDlweUxEyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloSAxAPZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWRx9QFtdXlJeZEZUHnsLY0UUUgNMLXJVYlEWXEVNXUdTHAQCUF5P">
-				<div class="list-item" target="_blank">
-				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t14932/273/596365605/21554/a7acb867/5a325403Nee53e558.jpg" original="" alt="全球售" style="display: inline;"></div>
-				<div class="info">
-					<div class="title box"><h2>萌宠圣诞会</h2><em></em></div>					
-					<p class="txt">【京东】圣诞感恩季2件8折3件7折；满299减100满199减80等满减活动；畅销好店应有尽有；狗粮低至3元/斤，更多劲爆活动请戳</p>
-				</div>
-				</div>
-				</a>
-			</li>
-		</ul>
-		<ul class="list-ul">
-			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFmFgcSpMLhIHRlVcWFNDAmZDAV0fQnFHZQ1bXwtaTVIBUkRMR05aZWkuD0JrHSNoOUNgS2QVTA8cXAx6LE1XGWwRBlUdRxUBDgRVClsQCRcBXhlcJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwsbA1ITXBIyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloRChoEZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWHZwZHgCblwQVkAOFhMNFXZWUxNfDGZXcF8VH0VNXUdTHAQCUF5P">
-				<div class="list-item" target="_blank">
-				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t16513/178/371185714/42053/d201aa50/5a30e621N6fd1072c.jpg" original="" alt="京东云" style="display: inline;"></div>
-				<div class="info">
-					<div class="title box"><h2>珠宝饰品，信饰诞旦</h2><em></em></div>					
-					<p class="txt">【京东】大牌珠宝首饰低至5折 白条12期免息 时尚饰品满399减100 周生生3件8.5折叠加用券减200 更多劲爆活动请戳</p>					
-				</div>
-				</div>
-				</a>
-			</li>
-		</ul>
-		<ul class="list-ul">
-			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFkMWVTZuHhBcWlgzRBNifRJdMXk4bGNgQBFJAQtaTVIBUkRMR05aZUQcfmR1ZFwSORBkSmYGQAVmVUEGNU1XGWwRBlUdRxUBDgRVClsQCRcPXhpZJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwsaAlcTWRAyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloRChQDZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWFQGQGQgXl5LSk1hClMsagJIYzd4InRwVUMHQUVNXUdTHAQCUF5P" target="_blank">
+				<a data-href="		https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLcD99UFRTDF4bSnp0UEpCHklfImM9XQEUQRp1NU4pXWV3ARJZOlRkYUFZFzUWAxIBSRtYCQERFlUbUBABGQNWK1gRABMHZRtaFAMXD1EcXhQyIgdWKxB7AyIHVRtSEwIUB1cfaxUGEgVdG14VBBECXRNrEjJJUjsdCBcGEgJRHFhHC0dVZStbFAMTBlQcWhwDIjdlK1klAQ%3D%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZPn8zR0RGXhBbBG1kRRgMXgdI" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FEApvABRPGkxdEQBXbTplVkd6J3sfQWBgWBBEDAtaTVIBUkRMR05aZVwTan5yYDQbOHd8WmMMfBwRclBOJk1XGWwRBlUdRxUBDgRWClsVCRcCXhtfJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlTFQcRA1EcXBUyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloSAxoEZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFXh1%2FFUYBWgJKARUFI3orQVdvdTVfD3dwTUIKTEVNXUdTHAQCUF5P" target="_blank">
 				<div class="list-item">
-				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t12259/239/2051272601/15116/9c04ec74/5a30e033N419bdbcc.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t12532/94/2327027409/15207/ed056fd5/5a3a31ceNb020c367.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
-					<div class="title box"><h2>配饰圣诞惠</h2><em></em></div>					
-					<p class="txt">【京东】领品类券299-100 499-200</p>
+					<div class="title box"><h2>大牌插座9块9元秒</h2><em></em></div>					
+					<p class="txt">【京东】大牌插座9块9元秒；满99减20满300减15等满减活动；2件85折；更有年末直降促销，众多爆品等你来</p>					
 				</div>
 				</div>
 				</a>
@@ -82,12 +79,12 @@
 		</ul>
 		<ul class="list-ul">
 			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFmNVZBVrE1ZQS1M8aA5mChp8AXkFUgJ5byBoPgtaTVIBUkRMR05aZWAOHQFqUlJkO3dCZXxXfB0dcGxTKV1XGWwRBlUdRxUBDgRVClsQCRYAXhhbJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwoQDlUcUxwyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloSAxYGZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWHRFcUclUxhHW0ZuJk4oHQppUzdFHBVpenImfkVNXUdTHAQCUF5P" target="_blank">
+				<a data-href="		https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLSwZvAVteDWIQQQB2dEpCHklfIgIcbVpCAWhxNU8HQXAWUy5IAGtyEEFZFzUWAxIBSRtYCQERFlUbUBABGQZcK1gRABMHZRtaFAMXD1EcXhQyIgdWKxB7AyIHVRtSEwIUB1cfaxUGEgVdG14VARsPUB1rEjJJUjsdCBcGEgJRHFhHC0dVZStbFAMTBlQfUxwCIjdlK1klAQ%3D%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZBUYhFktLXyxQDxdmYRgMXgdI" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FEGFuch1wWRN7TncAWF9OVkVSVk0nd35TdTYfDgtaTVIBUkRMR05aZWZacWBKcz5vPm5CdA40HgMVQ09uAXtXGWwRBlUdRxUBDgRWClsVCRcDXh9dJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlTFQcQA1MfXxUyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloRChsGZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFXnZ%2BZ08%2BGV1sXmJSFh8AQVVHBANnOWlDYGRRTkVNXUdTHAQCUF5P" target="_blank">
 				<div class="list-item">
-				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t13132/346/2162725475/22174/8832c014/5a3331efNc8e4ee54.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t12139/173/2075027928/46744/3024afa4/5a30e325Ne146c636.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
-					<div class="title box"><h2>自营书满200减80</h2><em></em></div>					
-					<p class="txt">【京东】自营书满200减80 部分图书叠券可享200减100 更有120-20 105-6 59-3元券可领 还有秒杀、包邮等众多活动</p>					
+					<div class="title box"><h2>大牌羽绒 低至89元</h2><em></em></div>					
+					<p class="txt">【京东】大牌羽绒 低至89元；尖货秒杀；众多品牌专场买一送一、各种满减，更有低至2折商品等你</p>					
 				</div>
 				</div>
 				</a>
@@ -95,20 +92,7 @@
 		</ul>
 		<ul class="list-ul">
 			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9Fcgp3DzEfXGZaZH49eSxsYHJXJ1kEcAp6cFxARU1dR1McBAJQXk83PWFdRVhWTxF%2BBEV%2BbFARYSZAXUp9AxdXewETB1MHWxYeEQdEG14eBhsMVRJrFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxJZHQcaDlAYXCUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGl8dCxY3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFPB1nGmNRHChNdGtvN2wid2JCdRdEPh1qZQ4OBQNKV0ZOSkIeSV8%3D" target="_blank">
-				<div class="list-item">
-				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t15295/93/558005678/25831/9cb21bdb/5a30e3abN5ce5b0d6.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
-				<div class="info">
-					<div class="title box"><h2>圣诞狂欢 箱包随购 跨店满199减50</h2><em></em></div>					
-					<p class="txt">【京东】跨店满199减50 399减100 699减200；更有199-20 399-50券可领；还有众多秒杀、私人定制活动</p>					
-				</div>
-				</div>
-				</a>
-			</li>
-		</ul>
-		<ul class="list-ul">
-			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FZlFZfSJODxF9a1s9ejtQWW91B28ddUJAUQlpRU1dR1McBAJQXk83UgUtRkthbCV%2BRWNfSnsAcgVVcnpAAxdXewETB1MHWxYeEQdEG18eAxEMVBprFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxJZHQQRBlQSWCUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGlwUBxU3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFKEZJaHAAT19qe05vNHseTn9gVSFdO1VQRFsnBQNKV0ZOSkIeSV8%3D" target="_blank">
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLaTNGcUR6NBo4Sx1LQglGaxcFSlMGczhiYWx9Ll0JcGVrcg5MLUMOHmlWGlsTHhIESRhYBAISDFcSUBcFIgRRGVoVMhIGVBpeHQYVAlQraxUBIkw7GmsVAhIOUxtdFQAWN1UfWxcKEgVdG1wSAhI3UisAQGwUVFcfWxAGFQQHEg5HMiIHVBpaFAMVBlUcayUyIgVlGA%3D%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZJ3MIZlRvZlR4BQpbV1sI" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FZlFZfSJODxF9a1s9ejtQWW91B28ddUJAUQlpRU1dR1McBAJQXk83UgUtRkthbCV%2BRWNfSnsAcgVVcnpAAxdXewETB1MHWxYeEQdEG18eAxEMVBprFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxJZHQQRBlQSWCUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGlwUBxU3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFKEZJaHAAT19qe05vNHseTn9gVSFdO1VQRFsnBQNKV0ZOSkIeSV8%3D" target="_blank">
 				<div class="list-item">
 				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t16357/17/436330517/33321/b79a25cc/5a332ae0Nddc62160.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
@@ -121,12 +105,12 @@
 		</ul>
 		<ul class="list-ul">
 			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FcFFFYipnAVZdSEwHeihHeGVmDmQ5THVzcSEcRU1dR1McBAJQXk83LloSanJoXSl4BBJFWlNSU0FRQkFgJRdXewETB1MHWxYeEQdEG18eAhAMUBtrFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxJeFAcRB10fXiUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGlwUBRU3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFPkZVd3gpQRhKWFlVNGgJb3VzXCp5AmJjZHNSBQNKV0ZOSkIeSV8%3D" target="_blank">
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLHQRxRUxSNGAmYB1LQglGax17cWwdZh9BYVZlDBMgU2ZxeRRFMlMOHmlWGlsTHhIESRhYBAISDFAdUBYKIgRRGVoVMhIGVBpeHQYVAlQraxUBIkw7GmsVAhIOUxtdFQAWN1UfWxcKEgJQHlMRBxA3UisAQGwUVFcfWxAGFQQHEg5HMiIHVBpaFAMVBlAYayUyIgVlGA%3D%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZU0Q%2FUlxHZi5mLgpbV1sI" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FRWNXYAp4U3JUZkIubAJgChdAEUUvZ1cQcAp8RU1dR1McBAJQXk83VWsBFmtMY1Z%2BKXdlQFMcbQ5jUUleJRdXewETB1MHWxYeEQREG14eAhsMUBprFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxNYFwYRBlUYWiUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGl8dChc3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFC3RHdVg2EzxDdld8IkIuHQdVQwtvKUAAZVgyBQNKV0ZOSkIeSV8%3D" target="_blank">
 				<div class="list-item">
-				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t15547/295/484499203/60380/93f4d1ee/5a38b0a2N6143e596.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t12349/78/2095089209/37675/9e8d7961/5a325938Nbab975fd.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
-					<div class="title box"><h2>领券159减30</h2><em></em></div>					
-					<p class="txt">【京东】来一场圣诞家宴吧，蔬菜3件9折4件8折更有30元60元优惠券可领叠加使用；精选店铺应有尽有</p>					
+					<div class="title box"><h2>美妆圣诞狂欢 满199减100</h2><em></em></div>					
+					<p class="txt">【京东】圣诞12.25秒杀，满199减100，满99减50；3件7.5折；更有爆款直降、圣诞拼团等活动</p>					
 				</div>
 				</div>
 				</a>
@@ -134,7 +118,20 @@
 		</ul>
 		<ul class="list-ul">
 			<li>
-				<a href="https://union-click.jd.com/jdc?e=0&p=AyIHVytaJQMiQwpDBUoyS0IQWlALHEBeBUQEQV8NXAAECUteDAdSHVgJARUHUQQCUF5PNwBBBH1wTUQleCFdS2h%2FE0MeE0dCBxMXV3sBEwdTB1sWHhEHRBtbHgMXDFYSaxYGEAZVK1sUAxMCXR9cEAMiN1UYa1RsFgVSEl4lAhIHXB1bEwIQA2UbXxUAGwRRHlwcARsAZRxrTld8AQYZXxUHFgBWSVJAUCI3ZStrJQciBA%3D%3D&t=W1dCFBBFC1BLVwpED0gdSVJKSQVJHBIAUxhHFgUSA0pCHklf" target="_blank">
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLWQJIekdHA3MAZ1wNXhBHBiVhE2ceSS9KWHdYHVgkUgRMAB0FMnxyHgs7GFoVBA4HVgdYFhMSB14ZWR4DEzdWH1kUAiIHVBpaEAoWAFAaayUCETcedVolAhIHXB1bEwIQA2UbXxUAGgdXH1IUAxoEZRxrTld8AQYZXxUHFgBWSVJAUCI3VRpaFAMTA10TWyUyIjdXK1g%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZF0IGbVdSUT1AKUsdS0IJRg%3D%3D" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFmFgcSpMLhIHRlVcWFNDAmZDAV0fQnFHZQ1bXwtaTVIBUkRMR05aZWkuD0JrHSNoOUNgS2QVTA8cXAx6LE1XGWwRBlUdRxUBDgRVClsQCRcBXhlcJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwsbA1ITXBIyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloRChoEZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWHZwZHgCblwQVkAOFhMNFXZWUxNfDGZXcF8VH0VNXUdTHAQCUF5P">
+				<div class="list-item" target="_blank">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t16513/178/371185714/42053/d201aa50/5a30e621N6fd1072c.jpg" original="" alt="京东云" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>珠宝饰品，信饰诞旦</h2><em></em></div>					
+					<p class="txt">【京东】大牌珠宝首饰低至5折 白条12期免息 时尚饰品满399减100 周生生3件8.5折叠加用券减200 更多劲爆活动请戳</p>					
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="list-ul">
+			<li>
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLfzBTARVANFIjE1pNGAxeB0gyVWMiSwkXRBBlIk86Shh2RhdZDXZ4VAtZdVgUAhQbVRhHFgEDB1AQWhMJEAVlGF8XAxI3VRpaFAcaA1IeWiUyEgRlUDUUMhIHVRJdFQQSBVErWxECEA9WGFIRABAGUStcJVlHaVNIWRECFwNSGAkcV0A3ZRtaFAMTBlETUhwyIjdlGWsW&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZMXAdFgVVZhxjXU1dDV4QRwY%3D" href="https://union-click.jd.com/jdc?e=0&p=AyIHVytaJQMiQwpDBUoyS0IQWlALHEBeBUQEQV8NXAAECUteDAdSHVgJARUHUQQCUF5PNwBBBH1wTUQleCFdS2h%2FE0MeE0dCBxMXV3sBEwdTB1sWHhEHRBtbHgMXDFYSaxYGEAZVK1sUAxMCXR9cEAMiN1UYa1RsFgVSEl4lAhIHXB1bEwIQA2UbXxUAGwRRHlwcARsAZRxrTld8AQYZXxUHFgBWSVJAUCI3ZStrJQciBA%3D%3D&t=W1dCFBBFC1BLVwpED0gdSVJKSQVJHBIAUxhHFgUSA0pCHklf" target="_blank">
 				<div class="list-item">
 				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t568/287/1296061366/23687/762ddd6e/54c8cda0N8017a502.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
@@ -145,6 +142,73 @@
 				</a>
 			</li>
 		</ul>
+		<ul class="list-ul">
+			<li>
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLTztGXHFRKm4YRXV0dFJmRExHTlplZT1TUmhzPnM4EWBLeydkKWZSZ3wra1cZbBEGVR1HFQEOBFYKWxUJEAJeHl8lARYFVBtrFQMTBlATXxIHEzdlG1glSXwGZRtbFQsUB1MbWREyEgNVGVMVABUOURtTEDIVNw5ONRNREANVHl8SAUAOAElrJQITBlQaWhEKGwBlK2slACIE&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZAXsIS2FEeCBYC2JkYQAoBAJQXk8%3D" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9Fcgp3DzEfXGZaZH49eSxsYHJXJ1kEcAp6cFxARU1dR1McBAJQXk83PWFdRVhWTxF%2BBEV%2BbFARYSZAXUp9AxdXewETB1MHWxYeEQdEG14eBhsMVRJrFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxJZHQcaDlAYXCUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGl8dCxY3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFPB1nGmNRHChNdGtvN2wid2JCdRdEPh1qZQ4OBQNKV0ZOSkIeSV8%3D" target="_blank">
+				<div class="list-item">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t15295/93/558005678/25831/9cb21bdb/5a30e3abN5ce5b0d6.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>圣诞狂欢 箱包随购 跨店满199减50</h2><em></em></div>					
+					<p class="txt">【京东】跨店满199减50 399减100 699减200；更有199-20 399-50券可领；还有众多秒杀、私人定制活动</p>					
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="list-ul">
+			<li>
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLXz5PfRZSJnpZXWRiV0pCHklfIkMVSB9sf3ZRNWgDFQNhdSp5IWxLFXdZFzUWAxIBSRtYCQERFlUbUBcFGQZSK1gRABMHZRtaFAMXD1EcXhQyIgdWKxB7AyIHVRtSEwIUB1cfaxUGEgVdG1kTBRUEUh1rEjJJUjsdCBcGEgJRHFhHC0dVZStbFAMTBlQcWhAAIjdlK1klAQ%3D%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZEX4BagZHdDQZE3NyQhgMXgdI" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFwttVQkTHhxJdFMGUDtFdFUBAE0MY2VFdwNYHAtaTVIBUkRMR05aZWlSRWpSflQSO2h8cWY2bAQdcFp0JntXGWwRBlUdRxUBDgRVClsQCRcCXh5SJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwsVDlweUxEyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloSAxAPZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWRx9QFtdXlJeZEZUHnsLY0UUUgNMLXJVYlEWXEVNXUdTHAQCUF5P">
+				<div class="list-item" target="_blank">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t14932/273/596365605/21554/a7acb867/5a325403Nee53e558.jpg" original="" alt="全球售" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>萌宠圣诞会</h2><em></em></div>					
+					<p class="txt">【京东】圣诞感恩季2件8折3件7折；满299减100满199减80等满减活动；畅销好店应有尽有；狗粮低至3元/斤，更多劲爆活动请戳</p>
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>		
+		<ul class="list-ul">
+			<li>
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLTR1NX0V7FUlebR1LQglGaxFZZgcJeRtjYVdbPWVTHRhkfA5sLFMOHmlWGlsTHhIESRhYBAISDFcfUBcGIgRRGVoVMhIGVBpeHQYVAlQraxUBIkw7GmsVAhIOUxtdFQAWN1UfWxcKEgVTGV8WABI3UisAQGwUVFcfWxAGFQQHEg5HMiIHVBpaFAMWD1MeayUyIgVlGA%3D%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZA10DSFVuRwceIwpbV1sI" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFkMWVTZuHhBcWlgzRBNifRJdMXk4bGNgQBFJAQtaTVIBUkRMR05aZUQcfmR1ZFwSORBkSmYGQAVmVUEGNU1XGWwRBlUdRxUBDgRVClsQCRcPXhpZJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwsaAlcTWRAyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloRChQDZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWFQGQGQgXl5LSk1hClMsagJIYzd4InRwVUMHQUVNXUdTHAQCUF5P" target="_blank">
+				<div class="list-item">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t12259/239/2051272601/15116/9c04ec74/5a30e033N419bdbcc.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>配饰圣诞惠</h2><em></em></div>					
+					<p class="txt">【京东】领品类券299-100 499-200</p>
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+		<ul class="list-ul">
+			<li>
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLQhBKWBZwBnMMa2dKcxQEAlBeTzc8UA5IZ29hLH4TTVlWelFCP1Z6aXo1F1d7ARMHUwdbFh4RBEQbWx4AFAxUHmsWBhAGVStbFAMTAl0fXBADIjdVGGtebBM3VRtbHAQSAVUZXyUCFgdXE1sXCxECVR5aJQUiXAB1XUYAFgdQH1wWUBtSBytrFQMTBlQaXBQHFDdlK2sXMhE%3D&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZDFAETwZlVD1MJXBaZkZKQh5JXw%3D%3D" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FFmNVZBVrE1ZQS1M8aA5mChp8AXkFUgJ5byBoPgtaTVIBUkRMR05aZWAOHQFqUlJkO3dCZXxXfB0dcGxTKV1XGWwRBlUdRxUBDgRVClsQCRYAXhhbJQEWBVQbaxUDEwZQE18SBxM3ZRtYJUl8BmUbWxULFAdTG1kRMhIDVRlSFwoQDlUcUxwyFTcOTjUTURADVR5fEgFADgBJayUCEwZUGloSAxYGZStrJQAiBA%3D%3D&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFWHRFcUclUxhHW0ZuJk4oHQppUzdFHBVpenImfkVNXUdTHAQCUF5P" target="_blank">
+				<div class="list-item">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t13132/346/2162725475/22174/8832c014/5a3331efNc8e4ee54.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>自营书满200减80</h2><em></em></div>					
+					<p class="txt">【京东】自营书满200减80 部分图书叠券可享200减100 更有120-20 105-6 59-3元券可领 还有秒杀、包邮等众多活动</p>					
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>
+		
+		
+		<ul class="list-ul">
+			<li>
+				<a data-href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxFBUYPCllHGAdFBwtSQEJLYBlyYkliL1tYdnVHAz1kRExHTlplHR9yZHp3NGk7TRhJGTBpHEdBWVgtTVcZbBEGVR1HFQEOBFYKWxUJEAFeH1MlARYFVBtrFQMTBlATXxIHEzdlG1glSXwGZRtbFQsUB1MbWREyEgNVGVMVABsBXRtfEzIVNw5ONRNREANVHl8SAUAOAElrJQITBlQaWhIDFA9lK2slACIE&t=W1dCFFlQCxxQVwhPRE5XDVULR0VFUFcZLlk8dVl3fRUYOGJXFm8qBAJQXk8%3D" href="https://union-click.jd.com/jdc?e=0&p=AyIFVCtaJQMiQwpDBUoyS0IQWhkeHAxGFkVESR1JUkpJBUkcTlcIRkVFUFdfEk9FcFFFYipnAVZdSEwHeihHeGVmDmQ5THVzcSEcRU1dR1McBAJQXk83LloSanJoXSl4BBJFWlNSU0FRQkFgJRdXewETB1MHWxYeEQdEG18eAhAMUBtrFgYQBlUrWxQDEwJdH1wQAyI3VRhrXmwTN1UbWxwEEgFVGV8lAhYHVxJeFAcRB10fXiUFIlwAdV1GABYHUB9cFlAbUgcraxUDEwZUGlwUBRU3ZStrFzIR&t=W1dCFFlQCxxTRAsEBwpZRxgHRQcLXkJaCAULR0dKQAEFPkZVd3gpQRhKWFlVNGgJb3VzXCp5AmJjZHNSBQNKV0ZOSkIeSV8%3D" target="_blank">
+				<div class="list-item">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t15547/295/484499203/60380/93f4d1ee/5a38b0a2N6143e596.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>领券159减30</h2><em></em></div>					
+					<p class="txt">【京东】来一场圣诞家宴吧，蔬菜3件9折4件8折更有30元60元优惠券可领叠加使用；精选店铺应有尽有</p>					
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>		
 		<ul class="list-ul">
 			<li>
 				<a href="https://union-click.jd.com/jdc?e=0&p=AyIHVytaJQMiQwpDBUoyS0IQWlALHEBeBUQEQV8NXAAECUteDAdXG18JAhACUQQCUF5PNylNJE5qeV5TeA1vVld9IFovbwsWXAMXV3sBEwdTB1sWHhEHRBtbHgIWDFQbaxYGEAZVK1sUAxMCXR9cEAMiN1UYa1RsFgVSEl4lAhIHXB1bEwIQA2UbXxUAGwRSG1oVBBcGZRxrTld8AQYZXxUHFgBWSVJAUCI3ZStrJQciBA%3D%3D&t=W1dCFBBFC1BLVwpED0gdSVJKSQVJHBIFVR9HFQAXA0pCHklf" target="_blank">
