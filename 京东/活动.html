@@ -52,6 +52,23 @@
 			}
 		})
 	});	
+	$(function(){
+		//hover()方法
+		$('#fan').hover(function(){
+			$('#fan_1').show();
+		},
+		function(){
+			$('#fan_1').hide();
+	    }
+		);	
+		$('#yu').hover(function(){
+			$('#yu_1').show();
+		},
+		function(){
+			$('#yu_1').hide();
+	    }
+		);	
+	});
 	</script>
 	<header class="index">
 		<div class="c-hd">
@@ -59,7 +76,8 @@
 				<a href="javascript:history.go(-1)"><i></i></a>
 			</section>
 			<section class="welcome">
-				本页为搜集的京东活动大全，以下活动最晚到31号结束，有需要的尽快奥。希望我们的整理为您省时省力
+				<p>本页为搜集的京东活动大全，以下活动最晚到31号结束，有需要的尽快，如果您有其他需求请页底联系</p>
+				<p><a href="../优惠券/京东.html">更多活动戳（更适合电脑浏览）>></a></p>
 			</section>
 			<section class="hd-nav">
 				<div class="hd-home">
@@ -72,6 +90,32 @@
 		<div class="col-title">
 		<section><span>劲.爆.活.动</span></section>
 		</div>
+		<ul class="list-ul">
+			<li>
+				<a data-href="http://union-click.jd.com/jdc?d=BShVc1" href="http://union-click.jd.com/jdc?d=5qgStd">
+				<div class="list-item">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t16576/262/710503506/20816/eec46243/5a3d239bNc9a86e4d.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>抢回家火车票喽</h2><em></em></div>					
+					<p class="txt">【京东】火车票不仅光速抢票免费，还能立减10元</p>
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>	
+		<ul class="list-ul">
+			<li>
+				<a data-href="http://union-click.jd.com/jdc?d=xRhtoM" href="http://union-click.jd.com/jdc?d=SBGBmx">
+				<div class="list-item">
+				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t14710/8/1021048763/60708/9aecb93/5a41bb12N7d08553f.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
+				<div class="info">
+					<div class="title box"><h2>手机配件部分买三免一</h2><em></em></div>					
+					<p class="txt">【京东】还有众多满减、优惠券、买赠、直降、新品、白条等活动</p>
+				</div>
+				</div>
+				</a>
+			</li>
+		</ul>			
 		<ul class="list-ul">
 			<li>
 				<a data-href="http://union-click.jd.com/jdc?d=cXkwWi" href="http://union-click.jd.com/jdc?d=XQM99N" target="_blank">
@@ -87,7 +131,7 @@
 		</ul>
 		<ul class="list-ul">
 			<li>
-				<a data-href="http://union-click.jd.com/jdc?d=977YTg" href="http://union-click.jd.com/jdc?d=AL3gMV" target="_blank">
+				<a data-href="http://union-click.jd.com/jdc?d=TIAHaw" href="http://union-click.jd.com/jdc?d=AL3gMV" target="_blank">
 				<div class="list-item">
 				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t16339/316/695106349/77368/ffa4047d/5a3ca120Nabfac399.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
@@ -143,7 +187,7 @@
 				<div class="list-item">
 				<div class="pic"><img src="http://img30.360buyimg.com/ads/jfs/t568/287/1296061366/23687/762ddd6e/54c8cda0N8017a502.jpg" original="img/tushu.png" alt="【京东】真品名酒 打破低价" style="display: inline;"></div>
 				<div class="info">
-					<div class="title box"><h2>圣诞零食狂欢</h2><em></em></div>
+					<div class="title box"><h2>零食狂欢</h2><em></em></div>
 					<p class="txt">【京东】低至满188减100 满减 优惠券 买赠 直降</p>					
 				</div>
 				</div>
@@ -290,9 +334,10 @@
 			</div> 
 	<footer class="footer">
 		<section class="footer-t" style="justify-content:space-between">
-			<p class="foot-nav"><span><a href="../index.html">首页</a></span></p>
-			<p></p>
-			<p class="user-info"><span>扫码返利</span><span>育儿交流</span>
+			<div class="foot-nav"><span><a href="../index.html">首页</a></span></div>
+			<div class="wechat"><span style="display:none" id="fan_1"><img style="position:absolute;right:2.18rem;bottom:.7rem;" src="../img/chat/IMG_8704.JPG"></img><p class="bottomArrow bottomArrow-left"></p></span></div>
+			<div class="wechat"><span style="display:none" id="yu_1"><img style="position:absolute;right:0rem;bottom:.7rem;" src="../img/chat/IMG_8706.JPG"></img><p class="bottomArrow bottomArrow-right"></p></span></div>
+			<p class="user-info"><span id='fan'>扫码返利</span><span id='yu'>育儿交流</span></p>
 		</section>
 	</footer>
 <script>
