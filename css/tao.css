@@ -132,7 +132,7 @@ body {
 }
 .edit {
 	position: absolute;
-	left: 8rem;
+	right: 1rem;
 	width: 1.93rem;
 }
 .edit a {
