@@ -126,7 +126,29 @@ body {
 	top: 0;
 	right: 0;
 }
-
+.money{
+	font-size: .6rem;
+	color:#fff;
+}
+.edit {
+	position: absolute;
+	left: 8rem;
+	width: 1.93rem;
+}
+.edit a {
+	padding-right: .14rem;
+	display: inline-block;
+	line-height: 100%;
+}
+.arrowside-fun .ml-coll {
+	background: url(../img/detail_side.png) no-repeat;
+	background-size: .63rem auto;
+	width: .63rem;
+	height: .63rem;
+	display: block;
+	text-indent: -999em;
+	background-position: 0 -1.25rem;
+}
 .c-hd section.hd-nav a, .c-hd .hd-home a {
 	padding: .1rem;
 	display: inline-block;
